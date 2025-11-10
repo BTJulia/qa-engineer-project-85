@@ -232,3 +232,163 @@
     - Игнорировать приглашение
   expected-result: |
     При игнорировании приглашение к новой игре от другого пользователя исчезает через 30 минут
+
+- summary: |
+    Проверка выбора уровня сложности новой игры
+  requirement: |
+    Возможность пользователя выбрать уровень сложности новой игры
+  prerequisites: |
+    Пользователь находится на странице https://codebattle.hexlet.io/#lobby
+  test-data: |
+    Empty
+  steps:
+    - Нажать на кнопку "Create a battle"
+    - В открывшемся окне в параметре "Level" выбрать уровень сложности новой игры
+    - Нажать на кнопку "With a bot" в параметре "Game Type"
+    - Нажать на кнопку "Create battle"
+  expected-result: |
+    Пользователь начинает новую игру с выбранным уровнем сложности
+
+- summary: |
+    Проверка выбора определённого времени на игру
+  requirement: |
+    Возможность пользователя выбрать определённое время на игру
+  prerequisites: |
+    Пользователь находится на странице https://codebattle.hexlet.io/#lobby
+  test-data: |
+    Empty
+  steps:
+    - Нажать на кнопку "Create a battle"
+    - В открывшемся окне в параметре "Time Control" установить время на игру
+    - Нажать на кнопку "With a bot" в параметре "Game Type"
+    - Нажать на кнопку "Create battle"
+  expected-result: |
+    Пользователь начинает новую игру с выбранным временем на прохождение
+
+- summary: |
+    Проверка изменения списка возможных задач в зависимости от выбранных тегов и уровня сложности
+  requirement: |
+    Список возможных задач должен меняться в зависимости от выбранных тегов и уровня сложности
+  prerequisites: |
+    Пользователь находится на странице https://codebattle.hexlet.io/#lobby
+  test-data: |
+    Empty
+  steps:
+    - Нажать на кнопку "Create a battle"
+    - В открывшемся окне в параметре "Level" выбрать уровень сложности новой игры
+    - В параметре "Choose task by name or tags" нажать на любой тег
+    - В параметре "Choose task by name or tags" нажать на поле фильтра
+    - Выбрать любое задание из предлагаемого списка
+    - Нажать на кнопку "With a bot" в параметре "Game Type"
+    - Нажать на кнопку "Create battle"
+  expected-result: |
+    Список возможных задач меняется в зависимости от выбранных тегов и уровня сложности
+
+- summary: |
+    Проверка корректного функционирования таймера во время игры
+  requirement: |
+    При корректной работе таймера отображается обратный отчёт от начала игры
+  prerequisites: |
+    Пользователь находится на странице https://codebattle.hexlet.io/#lobby
+  test-data: |
+    Empty
+  steps:
+    - Нажать на кнопку "Create a battle"
+    - В открывшемся окне заполнить параметры "Level", "Time control" и "Choose task by name or tags"
+    - Нажать на кнопку "With a bot" в параметре "Game Type"
+    - Нажать на кнопку "Create battle"
+  expected-result: |
+    Во время игры пользователь видит на экране таймер с обратным отчётом
+
+- summary: |
+    Проверка выбора английского языка в условии задачи
+  requirement: |
+    Возможность пользователя выбрать английский язык для условия задачи
+  prerequisites: |
+    Пользователь находится на странице https://codebattle.hexlet.io/#lobby
+  test-data: |
+    Empty
+  steps:
+    - Нажать на кнопку "Create a battle"
+    - В открывшемся окне заполнить параметры "Level", "Time control" и "Choose task by name or tags"
+    - Нажать на кнопку "With a bot" в параметре "Game Type"
+    - Нажать на кнопку "Create battle"
+    - Нажать на кнопку "Ru"
+    - Выбрать "En" из выпадающего окна
+  expected-result: |
+    Условие задачи теперь отображается на английском языке
+
+- summary: |
+    Проверка выбора русского языка в условии задачи
+  requirement: |
+    Возможность пользователя выбрать русский язык для условия задачи
+  prerequisites: |
+    Пользователь находится на странице https://codebattle.hexlet.io/#lobby
+  test-data: |
+    Empty
+  steps:
+    - Нажать на кнопку "Create a battle"
+    - В открывшемся окне заполнить параметры "Level", "Time control" и "Choose task by name or tags"
+    - Нажать на кнопку "With a bot" в параметре "Game Type"
+    - Нажать на кнопку "Create battle"
+    - Нажать на кнопку "Ru"
+    - Выбрать "En" из выпадающего окна
+    - Нажать на кнопку "En"
+    - Выбрать "Ru" из выпадающего окна
+  expected-result: |
+    Условие задачи теперь отображается на русском языке
+
+- summary: |
+    Проверка выбора языка программирования во время игры
+  requirement: |
+    Возможность пользователя выбрать язык программирования во время игры
+  prerequisites: |
+    Пользователь находится на странице https://codebattle.hexlet.io/#lobby
+  test-data: |
+    Empty
+  steps:
+    - Нажать на кнопку "Create a battle"
+    - В открывшемся окне заполнить параметры "Level", "Time control" и "Choose task by name or tags"
+    - Нажать на кнопку "With a bot" в параметре "Game Type"
+    - Нажать на кнопку "Create battle"
+    - Нажать на кнопку "Java 21" на поле в левой стороне экрана
+    - Выбрать язык программирования из выпадающего окна
+  expected-result: |
+    Пользователь может выбрать язык программирования во время игры
+
+- summary: |
+    Проверка функционирования кнопки "Give Up"
+  requirement: |
+    При корректной работе кнопки "Give Up" пользователь получает возможность досрочно завершить игру и объявить свое поражение
+  prerequisites: |
+    Пользователь находится на странице https://codebattle.hexlet.io/#lobby
+  test-data: |
+    Empty
+  steps:
+    - Нажать на кнопку "Create a battle"
+    - В открывшемся окне заполнить параметры "Level", "Time control" и "Choose task by name or tags"
+    - Нажать на кнопку "With a bot" в параметре "Game Type"
+    - Нажать на кнопку "Create battle"
+    - Нажать на кнопку "Give Up"
+    - В всплывающем окне с вопросом "Are you sure you want to give up?" нажать на кнопку "Give Up"
+    - В всплывающем окне с картинкой разбитого сердечка, надписью "If you read this you've lost the game" и музыкальным сопровождением нажать на кнопку "I`ll be back"
+  expected-result: |
+    После нажатия на кнопку Give Up пользователь досрочно завершает игру и объявляет свое поражение
+
+- summary: |
+    Проверка функционирования кнопки сброса решения Reset solution
+  requirement: |
+    При корректной работе кнопки Reset solution пользователь получает возможность сбросить своё решение
+  prerequisites: |
+    Пользователь находится на странице https://codebattle.hexlet.io/#lobby
+  test-data: |
+    Empty
+  steps: 
+    - Нажать на кнопку Create a game в правом верхнем углу
+    - В открывшемся окне выбрать параметры Level, Time control и Choose task by name or tags по умолчанию
+    - Нажать на кнопку With a bot ниже надписи Game Type 
+    - Нажать на кнопку Create battle в правом нижнем углу открывшегося окна
+    - Начать новую игру
+    - Нажать на кнопку сброса решения Reset solution
+  expected-result: |
+    После нажатия на кнопку Reset solution происходит сброс решения
