@@ -446,6 +446,61 @@
     Значения позиций "rank", "elo_rating" "games_played" и количество строчек в списке "COMPLETED GAMES" изменились
 
 - summary: |
+    Проверка функционирования кнопки "Join a battle"
+  requirement: |
+    При нажатии кнопки "Join a battle" пользователь должен иметь возможность присоединиться к одной из доступных для присоединения игр
+  prerequisites: |
+    Пользователь авторизован
+  test-data: |
+    Empty
+  steps:
+    - Нажать на кнопку "Join a battle"
+    - В появившемся окне "Join a game" нажать на кнопку "Fight"
+  expected-result: |
+    Пользователь присоединяется к одной из доступных для присоединения игр
+
+- summary: |
+    Проверка функционирования кнопки "View Hall of Fame"
+  requirement: |
+    При нажатии кнопки "View Hall of Fame" пользователь должен попасть на страницу "Hall of Fame" с таблицой из Топ-10 лидерующих игроков
+  prerequisites: |
+    Пользователь авторизован
+  test-data: |
+    Empty
+  steps:
+    - Нажать на кнопку "View Hall of Fame"
+    - Попасть на страницу "Hall of Fame" с таблицой "Top 10 Leaderboard"
+  expected-result: |
+    Пользователь переходит на страницу "Hall of Fame" с таблицой из Топ-10 лидерующих игроков
+
+- summary: |
+    Проверка функционирования кнопки "See Rules & Details"
+  requirement: |
+    При нажатии кнопки "See Rules & Details" должен выпасть список с выпадающими списками:
+    "Seasons, Grades, Points - Overview", 
+    "Tournament scheduling & Preemption",
+    "Player limits & Rounds per grade",
+    "Season points destribution",
+    "Season leaderboard tie-breakers",
+    "Hall of Fame",
+    "Codebattle - Overview & Key concepts"
+  prerequisites: |
+    Пользователь авторизован
+  test-data: |
+    Empty
+  steps:
+    - Нажать на кнопку "See Rules & Details"
+    - В списке нажать "Seasons, Grades, Points - Overview"
+    - В списке нажать "Tournament scheduling & Preemption"
+    - В списке нажать "Player limits & Rounds per grade"
+    - В списке нажать "Season points destribution"
+    - В списке нажать "Season leaderboard tie-breakers"
+    - В списке нажать "Hall of Fame"
+    - В списке нажать "Codebattle - Overview & Key concepts"
+  expected-result: |
+    По кнопке "See Rules & Details" выпадает список с 7-ю выпадающими списками 
+
+- summary: |
     Корректное функционирование чата "lobby" в параметре "General"
   requirement: |
     Пользователь должен иметь возможность отправлять сообщения в чат "lobby"
