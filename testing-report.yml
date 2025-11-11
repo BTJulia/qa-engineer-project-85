@@ -1,0 +1,137 @@
+---
+- summary: |
+    Проверка успешной регистрации
+  status: pass
+
+- summary: |
+    Проверка авторизации через Github
+  status: pass
+
+- summary: |
+    Проверка авторизации через Discord
+  status: pass
+
+- summary: |
+    Проверка авторизации зарегистрированного пользователя
+  status: pass
+
+- summary: |
+    Проверка 
+  status: pass
+
+- summary: |
+    Проверка 
+  status: pass
+
+- summary: |
+    Проверка 
+  status: pass
+
+- summary: |
+    Проверка 
+  status: pass
+
+- summary: |
+    Проверка 
+  status: pass
+
+- summary: |
+    Проверка 
+  status: pass
+
+- summary: |
+    Проверка 
+  status: pass
+
+- summary: |
+    Проверка 
+  status: pass
+
+- summary: |
+    Проверка 
+  status: pass
+
+- summary: |
+    Проверка 
+  status: pass
+
+- summary: |
+    Проверка 
+  status: pass
+
+- summary: |
+    Проверка 
+  status: pass
+
+- summary: |
+    Проверка 
+  status: pass
+
+- summary: |
+    Проверка 
+  status: pass
+
+- summary: |
+    Проверка 
+  status: pass
+
+- summary: |
+    Проверка 
+  status: pass
+
+- summary: |
+    Проверка 
+  status: pass
+
+- summary: |
+    Проверка 
+  status: pass
+
+- summary: |
+    Проверка 
+  status: pass
+
+- summary: |
+    Проверка 
+  status: pass
+
+- summary: |
+    Проверка 
+  status: pass
+
+- summary: |
+    Проверка 
+  status: pass
+
+- summary: |
+    Проверка 
+  status: pass
+
+- summary: |
+    Проверка 
+  status: pass
+
+- summary: |
+    Проверка 
+  status: pass
+
+- summary: |
+    Проверка 
+  status: pass
+
+- summary: |
+    Проверка 
+  status: pass
+
+- summary: |
+    Проверка 
+  status: pass
+
+- summary: |
+    Проверка 
+  status: pass
+
+- summary: |
+    Проверка 
+  status: pass
+  
