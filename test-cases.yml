@@ -509,6 +509,7 @@
   test-data: |
     Empty
   steps:
+    - Нажать на кнопку "Contests History"
     - Нажать на кнопку "Month"
     - Нажать на кнопку "Day"
     - Нажать на кнопку "Agenda"
@@ -519,6 +520,42 @@
     - Нажать на кнопку "Open Tournament"
   expected-result: |
     При нажатии кнопки "Contests History" пользователь попадает на страницу с информацией о проведенных турнирах
+
+- summary: |
+    Проверка функционирования кнопки "My Tournaments"
+  requirement: |
+    При нажатии кнопки "My Tournaments" пользователь должен попасть на страницу с информацией о проведенных турнирах с его участием
+  prerequisites: |
+    Пользователь авторизован
+  test-data: |
+    Empty
+  steps:
+    - Нажать на кнопку "My Tournaments"
+    - Нажать на кнопку "Month"
+    - Нажать на кнопку "Day"
+    - Нажать на кнопку "Agenda"
+    - Нажать на кнопку "Back"
+    - Нажать на кнопку "Today"
+    - Нажать на кнопку "Next"
+    - Нажать на любой занесенный в таблицу турнир и посмотреть информацию о нем
+    - Нажать на кнопку "Open Tournament"
+  expected-result: |
+    При нажатии кнопки "My Tournaments" пользователь попадает на страницу с информацией о проведенных турнирах с его участием
+
+- summary: |
+    Проверка функционирования кнопки "Create a Tournament"
+  requirement: |
+    При нажатии кнопки "Create a Tournament" пользователь должен попасть на страницу создания нового турнира
+  prerequisites: |
+    Пользователь авторизован
+  test-data: |
+    Empty
+  steps:
+    - Нажать на кнопку "Create a Tournament"
+    - В открывшемся форме заполнить "Basic Information", "Schedule & Access", "Tournament Features", "Task Configuration" и "Tournament Settings"
+    - Нажать на кнопку "Create Tournament"
+  expected-result: |
+    При нажатии кнопки "Create a Tournament" пользователь попадает на страницу создания нового турнира
 
 - summary: |
     Корректное функционирование чата "lobby" в параметре "General"
