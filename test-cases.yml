@@ -351,7 +351,7 @@
     - В открывшемся окне заполнить параметры "Level", "Time control" и "Choose task by name or tags"
     - Нажать на кнопку "With a bot" в параметре "Game Type"
     - Нажать на кнопку "Create battle"
-    - Нажать на кнопку "Java 21" на поле в левой стороне экрана
+    - Нажать на кнопку "Node.js 22.15.0"
     - Выбрать язык программирования из выпадающего окна
   expected-result: |
     Пользователь может выбрать язык программирования во время игры
@@ -434,3 +434,35 @@
     - Получить во вкладке "Output" надпись "Tests failed" с результатами тестов
   expected-result: |
     После введения неверного кода и нажатия кнопки "Run" пользователь получает сообщение о проигрыше и продолжает игру
+
+- summary: |
+    Проверка функционирования сайта на мобильных устройствах
+  requirement: |
+    Сайт должен корректно отображаться и фукнционировать на мобильных устройствах
+  prerequisites: |
+    Пользователь находится на странице https://codebattle.hexlet.io/#lobby
+  test-data: |
+    Empty
+  steps: 
+    - Нажать на кнопку "Create a battle"
+    - В открывшемся окне заполнить параметры "Level", "Time control" и "Choose task by name or tags" по умолчанию
+    - Нажать на кнопку "With a bot" в параметре "Game Type"
+    - Нажать на кнопку "Create battle"
+  expected-result: |
+    Сайт корректно отображает и функционирует на мобильных устройствах
+
+- summary: |
+    Проверка на кроссбраузерность сайта
+  requirement: |
+    Сайт должен функционировать в последних версиях браузеров Google Chrome и Mozilla Firefox
+  prerequisites: |
+    Пользователь находится на странице https://codebattle.hexlet.io/#lobby
+  test-data: |
+    Браузер Google Chrome Версия 142.0.7444.61 (Официальная сборка), Браузер Mozilla Firefox Version 145.0
+  steps: 
+    - Нажать на кнопку "Create a battle"
+    - В открывшемся окне заполнить параметры "Level", "Time control" и "Choose task by name or tags" по умолчанию
+    - Нажать на кнопку "With a bot" в параметре "Game Type"
+    - Нажать на кнопку "Create battle"
+  expected-result: |
+    Сайт корректно функционирует в последних версиях браузеров Google Chrome и Mozilla Firefox
