@@ -108,10 +108,12 @@
   requirement: |
     При вводе зарегистрированного email пользователь может изменить пароль
   prerequisites: |
-    Открыта страница авторизации https://codebattle.hexlet.io/session/new?locale=en&next=%2F
+    Открыта главная страница сайта
   test-data: |
-    Email = example123@gmail.com
+    Зарегистрированная почта
   steps:
+    - Нажать на кнопку "Sign in" в правом верхнем углу
+    - Попасть на страницу входа
     - Нажать кнопку "Forgot your password?"
     - Ввести "Email"
     - Нажать кнопку "Submit"
@@ -119,7 +121,7 @@
     - Перейти по ссылке
     - Ввести "New password"
     - Нажать кнопку "SAVE"
-    - Вернуться на страницу авторизации https://codebattle.hexlet.io/session/new?locale=en&next=%2F
+    - Вернуться на страницу авторизации
     - Ввести "Email"
     - Ввести измененный "Password"
     - Нажать кнопку "Submit"
